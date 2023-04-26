@@ -1,0 +1,72 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="openacademy.session_list">
+      <field name="name">openacademy session list</field>
+      <field name="model">openacademy.session</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="course_id"/>
+          <field name="instructor_id"/>
+          <field name="start_date"/>
+          <field name="classroom_id"/>
+          <field name="number_of_seats"/>
+          <field name="taken_seats"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openacademy.session_form">
+      <field name="name">openacademy session form</field>
+      <field name="model">openacademy.session</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <h1>
+              <field name="name"/>
+            </h1>
+            <group>
+              <field name="course_id"/>
+              <field name="instructor_id"/>
+              <field name="start_date"/>
+              <field name="classroom_id"/>
+              <field name="number_of_seats"/>
+              <field name="taken_seats" widget="progressbar"/>
+            </group>
+            <notebook>
+              <page string='Atendees'>
+                <field name='attendee_ids'/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openacademy.session_search">
+      <field name="name">openacademy session search</field>
+      <field name="model">openacademy.session</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="course_id"/>
+          <field name="instructor_id"/>
+          <field name="start_date"/>
+          <field name="classroom_id"/>
+          <field name="number_of_seats"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="openacademy.session_action_window">
+      <field name="name">Sessions</field>
+      <field name="res_model">openacademy.session</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,64 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="openacademy.course_list">
+      <field name="name">openacademy course list</field>
+      <field name="model">openacademy.course</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="responsible_id"/>
+          <field name="duration"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openacademy.course_form">
+      <field name="name">openacademy course form</field>
+      <field name="model">openacademy.course</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <h1>
+              <field name="name"/>
+            </h1>
+            <notebook>
+              <page string="Sessions">
+                <field name="session_ids"/>
+              </page>
+              <page string="Other information">
+                <group>
+                  <field name="description"/>
+                  <field name="responsible_id"/>
+                  <field name="duration"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openacademy.course_search">
+      <field name="name">openacademy course search</field>
+      <field name="model">openacademy.course</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="responsible_id"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="openacademy.course_action_window">
+      <field name="name">Courses</field>
+      <field name="res_model">openacademy.course</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="openacademy.classroom_list">
+      <field name="name">openacademy classroom list</field>
+      <field name="model">openacademy.classroom</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="number_of_seats"/>
+          <field name="has_screen"/>
+          <field name="screen_size"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openacademy.classroom_form">
+      <field name="name">openacademy classroom form</field>
+      <field name="model">openacademy.classroom</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <h1>
+              <field name="name"/>
+            </h1>
+            <group>
+              <field name="number_of_seats"/>
+              <field name="has_screen"/>
+              <field name="screen_size"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openacademy.classroom_search">
+      <field name="name">openacademy classroom search</field>
+      <field name="model">openacademy.classroom</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="number_of_seats"/>
+          <field name="has_screen"/>
+          <field name="screen_size"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="openacademy.classroom_action_window">
+      <field name="name">Classrooms</field>
+      <field name="res_model">openacademy.classroom</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>
