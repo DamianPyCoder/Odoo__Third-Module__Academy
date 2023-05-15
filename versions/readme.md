@@ -1,6 +1,6 @@
 ## Correcciones:
 
-La parte 2 tiene da un pequeño problema. El error que genera es debido a hacer copia/pega de dos funciones que calculaban los mismos campos pero que no he cambiado el nombre y se llaman igual:
+La parte 2 tiene da un pequeño problema. El error que genera es debido a hacer copia/pega de dos funciones que calculaban los mismos campos pero olvidé cambiar el nombre:
 
     @api.depends('class_id')
     def _compute_number_of_seats(self):
