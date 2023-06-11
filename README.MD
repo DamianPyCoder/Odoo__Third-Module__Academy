@@ -37,25 +37,25 @@ https://www.odoo.com/documentation/16.0/developer/tutorials/backend.html
 - [x] Quan canviem el valor del camp has_screen to True al model classroom, s’ha d’assignar el valor 75IN (medium) en screen_size. (onchange).
 
 ## Actions. Default values (openacademy-5)
-- [ ] Afegim un camp state al model i a la vista formulari de session.
-- [ ] En crear una sessió, aquesta es crearà en estat New (default value).
-- [ ] Les sessions poden canviar d’estat. Per això farem servir dos botons a la vista formulari de session: Cancel i Done. Els canvis d’estat permesos seran:
-- [ ] De New a Planned quan afegim la data d’inici (start_date) (onchange).
-- [ ] De Planned a Done quan cliquem el botó Done (action done). 
-- [ ] De Planned o New a Cancel quan cliquem el botó Cancel (action cancel).
-- [ ] La resta de transicions no són permeses, per exemple de New a Done o de Done a Cancel.
-- [ ] Buscar com fer servir el widget statusbar.
+- [x] Afegim un camp state al model i a la vista formulari de session.
+- [x] En crear una sessió, aquesta es crearà en estat New (default value).
+- [x] Les sessions poden canviar d’estat. Per això farem servir dos botons a la vista formulari de session: Cancel i Done. Els canvis d’estat permesos seran:
+- [x] De New a Planned quan afegim la data d’inici (start_date) (onchange).
+- [x] De Planned a Done quan cliquem el botó Done (action done). 
+- [x] De Planned o New a Cancel quan cliquem el botó Cancel (action cancel).
+- [x] La resta de transicions no són permeses, per exemple de New a Done o de Done a Cancel.
+- [x] Buscar com fer servir el widget statusbar.
 
 ## Actions. Constrains (openacademy-6)
-- [ ] No es permet que hi hagi menys d’un seient a una classe (sql constraint)
-- [ ] Obrirem una nova entrada al menú horitzontal que es dirà Settings.
-- [ ] D’aquesta entrada penjarà una acció ‘Course tags’ associada a un nou model course_tag 
-- [ ] El model course_tag només tindrà un camp name. Els valors del camp name seran únics, és a dir, no podrà haver-hi dos tags amb el mateix nom (sql constraint).
-- [ ] Afegirem course_tag_ids al model i a la vista course. Buscar com fer servir el widget many2many_tags.
-- [ ] No es permetrà que hi hagin més participants que seients a una sessió (python constrain)
+- [x] No es permet que hi hagi menys d’un seient a una classe (sql constraint)
+- [x] Obrirem una nova entrada al menú horitzontal que es dirà Settings.
+- [x] D’aquesta entrada penjarà una acció ‘Course tags’ associada a un nou model course_tag 
+- [x] El model course_tag només tindrà un camp name. Els valors del camp name seran únics, és a dir, no podrà haver-hi dos tags amb el mateix nom (sql constraint).
+- [x] Afegirem course_tag_ids al model i a la vista course. Buscar com fer servir el widget many2many_tags.
+- [x] No es permetrà que hi hagin més participants que seients a una sessió (python constrain)
 
 ## Actions. Herència (openacademy-7)
-- [ ] No es podran esborrar les sessions amb estat Planned. (herencia en python)
-- [ ] Modificar el model res.partner per afegir un camp booleà que indiqui si aquest partner és instructor o no. Afegiu el camp a la vista. (herencia model i vista)
-- [ ] Afegiu també a la vista formulari de res.partner les sessions que ha impartit un instructor. Poseu-les a una pàgina nova del notebook. (herencia model i vista)
-- [ ] En seleccionar l'instructor per una sessió només els partners que tinguin el valor True al camp instructor es mostraran. (dominis)
+- [x] No es podran esborrar les sessions amb estat Planned. (herencia en python)
+- [x] Modificar el model res.partner per afegir un camp booleà que indiqui si aquest partner és instructor o no. Afegiu el camp a la vista. (herencia model i vista)
+- [x] Afegiu també a la vista formulari de res.partner les sessions que ha impartit un instructor. Poseu-les a una pàgina nova del notebook. (herencia model i vista)
+- [x] En seleccionar l'instructor per una sessió només els partners que tinguin el valor True al camp instructor es mostraran. (dominis)
